@@ -1,0 +1,63 @@
+/*.MovieSet{*/
+/*    width: 100%;*/
+/*    margin: auto;*/
+/*    height: 200px;*/
+/*    display: grid;*/
+/*    flex-direction: row;*/
+/*    justify-content: space-between;*/
+
+:root {
+    --gutter: 20px;
+}
+
+.MovieSet {
+    padding: var(--gutter) 0;
+    display: grid;
+    grid-gap: var(--gutter) 0;
+    grid-template-columns: var(--gutter) 1fr var(--gutter);
+    align-content: start;
+    max-width: 90%;
+    height: 200px;
+    margin: auto;
+}
+
+.MovieSet > * {
+    grid-column: 2 / -2;
+}
+
+.MovieSet > .full {
+    grid-column: 1 / -1;
+}
+
+
+.MovieSet ul {
+    display: grid;
+    grid-gap: calc(var(--gutter) / 2);
+    grid-template-columns: repeat(10, 90px);
+    grid-template-rows: minmax(150px, 1fr);
+    overflow-x: scroll;
+    scroll-snap-type: x proximity;
+    padding-bottom: calc(.75 * var(--gutter));
+    margin-bottom: calc(-.25 * var(--gutter));
+    list-style: none;
+}
+
+
+@media (min-width: 500px) and (min-height: 400px){
+    .MovieSet{
+        height: 300px;
+    }
+    .MovieSet ul {
+        grid-template-columns: repeat(10, 160px);
+    }
+}
+
+@media (min-width: 1000px) and (min-height: 700px){
+    .MovieSet{
+        max-width: 80%;
+        height: 450px;
+    }
+    .MovieSet ul {
+        grid-template-columns: repeat(10, 270px);
+    }
+}

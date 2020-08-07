@@ -1,6 +1,7 @@
 import React, {Component} from 'react';
 import './App.css';
 import Layout from "./hoc/Layout/Layout";
+import MovieSet from "./containers/Movieset/MovieSet";
 
 
 class App extends Component
@@ -10,7 +11,7 @@ class App extends Component
     return (
         <div className="App">
           <Layout>
-                hello!
+              <MovieSet />
           </Layout>
         </div>
     );
