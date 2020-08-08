@@ -19,6 +19,7 @@
     max-width: 90%;
     height: 200px;
     margin: auto;
+    position: relative;
 }
 
 .MovieSet > * {
@@ -33,7 +34,7 @@
 .MovieSet ul {
     display: grid;
     grid-gap: calc(var(--gutter) / 2);
-    grid-template-columns: repeat(10, 90px);
+    grid-template-columns: repeat(50, 90px);
     grid-template-rows: minmax(150px, 1fr);
     overflow-x: scroll;
     scroll-snap-type: x proximity;
@@ -48,16 +49,35 @@
         height: 300px;
     }
     .MovieSet ul {
-        grid-template-columns: repeat(10, 160px);
+        grid-template-columns: repeat(50, 160px);
     }
+
 }
 
-@media (min-width: 1000px) and (min-height: 700px){
+@media (min-width: 1100px) and (min-height: 700px){
     .MovieSet{
-        max-width: 80%;
-        height: 450px;
+        max-width: 95%;
+        height: 460px;
+
     }
     .MovieSet ul {
-        grid-template-columns: repeat(10, 270px);
+        grid-template-columns: repeat(50, 270px);
+        max-width: 100%;
+        overflow-x: hidden;
+
     }
+
+
 }
+@media (min-width: 1500px) and (min-height: 700px){
+    .MovieSet{
+        max-width: 95%;
+        height: 550px;
+    }
+    .MovieSet ul {
+        grid-template-columns: repeat(50, 360px);
+        max-width: 100%;
+    }
+
+}
+

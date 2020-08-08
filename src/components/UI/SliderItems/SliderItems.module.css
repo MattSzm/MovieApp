@@ -1,0 +1,42 @@
+.arrowRight {
+    display: none;
+}
+.arrowLeft {
+    display: none;
+}
+
+
+
+@media (min-width: 1100px) and (min-height: 700px) {
+    .arrowRight {
+        cursor: pointer;
+        display: block;
+        position: absolute;
+        top: 40%;
+        right: 0;
+        margin: 0;
+        width: 0.1%;
+        border-top: 44px solid transparent;
+        border-bottom: 44px solid transparent;
+        border-left: 27px solid darkred;
+    }
+
+    .arrowLeft {
+        cursor: pointer;
+        height: 0;
+        border-top: 44px solid transparent;
+        border-bottom: 44px solid transparent;
+        border-right: 27px solid darkred;
+        position: absolute;
+        display: block;
+        top: 40%;
+        left: 0;
+        margin: 0;
+        width: 0.1%;
+    }
+}
+
+.disabled{
+    cursor: none;
+    filter: blur(15px)
+}

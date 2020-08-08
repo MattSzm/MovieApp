@@ -6,8 +6,7 @@ class Layout extends Component
     render() {
         return (
             <Fragment>
-                {/*layout!*/}
-
+                LAYOUT
                 {this.props.children}
             </Fragment>
         );
