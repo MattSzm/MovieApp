@@ -13,8 +13,10 @@
     transform: translateX(0);
     transition: transform 2.5s ease-in;
     animation: showMovieItem 1s ease-in forwards;
-
+    
 }
+
+
 @keyframes showMovieItem {
     0% {
         opacity: 0.1;
@@ -31,6 +33,13 @@ img{
     height: 100%;
     width: auto;
     border-radius: 10px;
+}
+
+@media (max-width: 1100px) and (max-height: 700px){
+    img{
+        border-radius: 0px;
+    }
+
 }
 
 h1{
@@ -51,6 +60,20 @@ h1{
 
 .ShowInfo img {
     filter: blur(4px) grayscale(35%);
+    animation: showInfoActiveScale 0.3 linear forwards;
+}
+
+@keyframes showInfoActiveScale {
+    0% {
+        transform: scale(1);
+    }
+    38% {
+        transform: scale(1.07);
+    }
+
+    100% {
+        transform: scale(1.15);
+    }
 }
 
 @keyframes showInfoActive {

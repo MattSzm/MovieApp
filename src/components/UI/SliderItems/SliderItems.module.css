@@ -20,6 +20,10 @@
         border-bottom: 44px solid transparent;
         border-left: 27px solid darkred;
     }
+    .arrowRight:hover {
+        border-left: 27px solid #a10404;
+    }
+
 
     .arrowLeft {
         cursor: pointer;
@@ -34,9 +38,12 @@
         margin: 0;
         width: 0.1%;
     }
+    .arrowLeft:hover{
+        border-right: 27px solid #a10404;
+    }
 }
 
 .disabled{
     cursor: none;
-    filter: blur(15px)
+    filter: blur(12px)
 }
