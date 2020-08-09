@@ -66,9 +66,8 @@
         overflow-x: hidden;
 
     }
-
-
 }
+
 @media (min-width: 1500px) and (min-height: 700px){
     .MovieSet{
         max-width: 95%;

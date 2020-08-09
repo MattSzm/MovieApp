@@ -16,21 +16,21 @@
         right: 0;
         margin: 0;
         width: 0.1%;
-        border-top: 44px solid transparent;
-        border-bottom: 44px solid transparent;
-        border-left: 27px solid darkred;
+        border-top: 60px solid transparent;
+        border-bottom: 60px solid transparent;
+        border-left: 28px solid darkred;
     }
     .arrowRight:hover {
-        border-left: 27px solid #a10404;
+        border-left: 27px solid #ad0707;
     }
 
 
     .arrowLeft {
         cursor: pointer;
         height: 0;
-        border-top: 44px solid transparent;
-        border-bottom: 44px solid transparent;
-        border-right: 27px solid darkred;
+        border-top: 60px solid transparent;
+        border-bottom: 60px solid transparent;
+        border-right: 28px solid darkred;
         position: absolute;
         display: block;
         top: 40%;
@@ -39,11 +39,34 @@
         width: 0.1%;
     }
     .arrowLeft:hover{
-        border-right: 27px solid #a10404;
+        border-right: 27px solid #ad0707;
     }
 }
+
+@media (min-width: 1100px) and (min-height: 700px) {
+    .arrowRight {
+        border-top: 66px solid transparent;
+        border-bottom: 66px solid transparent;
+        border-left: 32px solid darkred;
+    }
+    .arrowRight:hover {
+        border-left: 32px solid #ad0707;
+    }
+
+    .arrowLeft {
+        border-top: 66px solid transparent;
+        border-bottom: 66px solid transparent;
+        border-right: 32px solid darkred;
+    }
+    .arrowLeft:hover{
+        border-right: 32px solid #ad0707;
+    }
+
+}
+
 
 .disabled{
     cursor: none;
     filter: blur(12px)
 }
+
