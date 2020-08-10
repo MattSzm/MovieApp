@@ -1,9 +1,10 @@
-import React, { Component } from "react";
+import React, { Component, Fragment } from "react";
 import MovieItem from "../../components/MovieItem/MovieItem";
 import classes from './MovieSet.module.css';
 import Slider from '../../components/UI/SliderItems/SliderItems';
 import { connect } from 'react-redux';
 import * as actionTypes from '../../store/actions/actionTypes';
+import MovieDetail from "../MovieDetail/MovieDetail";
 
 
 class MovieSet extends Component{
@@ -109,6 +110,7 @@ class MovieSet extends Component{
             />));
 
         return (
+            <Fragment>
                 <div className={classes.MovieSet}>
                     <ul>
                         {items}
@@ -122,6 +124,10 @@ class MovieSet extends Component{
                             scroll={this.scrollRight}
                     />
                 </div>
+
+                <MovieDetail widthResolution={this.state.width}
+                            heightResolution={this.state.height}/>
+            </Fragment>
 
         );
     }

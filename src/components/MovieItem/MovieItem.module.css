@@ -29,7 +29,7 @@
     }
 }
 
-img{
+.MovieItem img{
     height: 100%;
     width: auto;
     border-radius: 10px;
@@ -42,7 +42,7 @@ img{
 
 }
 
-h1{
+.MovieItem h1{
     color: white;
     position: absolute;
     cursor: pointer;

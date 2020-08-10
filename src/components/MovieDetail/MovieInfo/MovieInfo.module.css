@@ -1,0 +1,25 @@
+.MovieInfo{
+    width: 37.5%;
+
+}
+.MovieInfo h1{
+    border-bottom: solid darkred;
+}
+
+.MovieInfo h3{
+    margin-top: -15px;
+    margin-bottom: 40px;
+}
+
+.MovieInfo p{
+    width: 85%;
+    margin: auto;
+    text-align: center;
+}
+
+
+@media (max-width: 1100px) {
+    .MovieInfo {
+        width: 100%;
+    }
+}

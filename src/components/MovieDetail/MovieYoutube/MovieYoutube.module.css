@@ -1,0 +1,12 @@
+.MovieYoutube {
+    width: 57.5%;
+    margin: auto;
+}
+
+
+@media (max-width: 1100px) {
+    .MovieYoutube {
+        width: 100%;
+        margin-bottom: 40px;
+    }
+}

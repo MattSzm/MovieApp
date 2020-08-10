@@ -6,6 +6,11 @@ import * as serviceWorker from './serviceWorker';
 import moviesReducer from '../src/store/reducers/movies';
 import { createStore } from 'redux';
 import { Provider } from 'react-redux';
+import axios from 'axios'
+
+axios.defaults.baseURL = process.env.REACT_APP_API_KEY;
+
+
 
 const store = createStore(moviesReducer);
 

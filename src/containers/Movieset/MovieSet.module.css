@@ -20,6 +20,7 @@
     height: 200px;
     margin: auto;
     position: relative;
+    margin-bottom: 28px;
 }
 
 .MovieSet > * {
@@ -47,6 +48,7 @@
 @media (min-width: 500px) and (min-height: 400px){
     .MovieSet{
         height: 300px;
+        margin-bottom: 55px;
     }
     .MovieSet ul {
         grid-template-columns: repeat(50, 160px);
@@ -58,7 +60,7 @@
     .MovieSet{
         max-width: 95%;
         height: 460px;
-
+        margin-bottom: 70px;
     }
     .MovieSet ul {
         grid-template-columns: repeat(50, 270px);
@@ -72,6 +74,7 @@
     .MovieSet{
         max-width: 95%;
         height: 550px;
+        margin-bottom: 90px;
     }
     .MovieSet ul {
         grid-template-columns: repeat(50, 360px);
