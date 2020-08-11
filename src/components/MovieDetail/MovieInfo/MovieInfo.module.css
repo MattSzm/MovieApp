@@ -3,7 +3,7 @@
     animation: MovieInfoOpacity 1.5s linear forwards;
 }
 .MovieInfo h1{
-    border-bottom: solid darkred;
+    border-bottom: solid #8b0000;
 }
 
 .MovieInfo h3{
@@ -11,6 +11,7 @@
 }
 
 .MovieInfo p{
+    line-height: 1.5em;
     width: 85%;
     margin: auto;
     text-align: center;

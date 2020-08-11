@@ -1,0 +1,15 @@
+.WatchOnline {
+    height: 20px;
+    width: auto;
+    display: block;
+}
+.WatchOnline img{
+    width: 30%;
+    margin-top: -15px;
+}
+.WatchOnline img:hover{
+    cursor: pointer;
+}
+.WatchOnline h3 {
+    margin-top: 2.5em;
+}

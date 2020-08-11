@@ -19,6 +19,8 @@ class MovieDetail extends Component{
                         movieDesc={this.props.movieDetailData.description}
                         movieYear={this.props.movieDetailData.year}
                         movieDirector={this.props.movieDetailData.director}
+                        movieOnlineLink={this.props.movieDetailData.onlineLink}
+                        movieOnlinePlatform={this.props.movieDetailData.onlinePlatform}
                 />
                 </div>);
         }

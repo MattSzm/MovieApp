@@ -1,5 +1,5 @@
 import React from "react";
-import appLogo from '../../assets/MoviePosters/Icon2Resized.png';
+import appLogo from '../../assets/Icon2Resized.png';
 import classes from './Logo.module.css';
 
 
