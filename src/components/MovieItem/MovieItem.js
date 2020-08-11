@@ -20,7 +20,9 @@ const movieItem = (props) => {
                             onMouseOver={props.showInfo.bind(this, props.id)}
                             onMouseLeave={props.hideInfo.bind(this, props.id)}>
                             <img src={props.imageSource}/>
-                            <h1>Check more!</h1>
+                            <h1 onClick={props.openDetails.bind(this, props.id)}>
+                                Check more!
+                            </h1>
         </li>
     );
 

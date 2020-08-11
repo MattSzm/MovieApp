@@ -19,7 +19,6 @@ import lion_king_poster from "../../assets/MoviePosters/lion_king.progressive.jp
 const initialState = {
     items: [
         {   id: 0,
-            title: 'Once Upon a Time in Hollywood',
             imageSource: one_upon_a_time_in_hollywood_poster,
             picked: false,
             refreshed: true},
@@ -100,6 +99,9 @@ const initialState = {
             picked: false,
             refreshed: true},
     ],
+    loading: false,
+    fetchError: null,
+    movieDetailData: null
 };
 
 const on_mouse_handler = (copiedItems, itemId) => {
@@ -133,8 +135,18 @@ const reducer = (state=initialState, action) => {
             return {...state,
                     items: off_mose_handler(copiedItemsOff,
                                         action.itemId)};
-
-
+        case actionTypes.SHOW_MOVIE_START:
+            return {...state,
+                     loading: true,
+                    fetchError: null};
+        case actionTypes.SHOW_MOVIE_SUCCESS:
+            return {...state,
+                    loading: false,
+                    movieDetailData: action.fetchedData};
+        case actionTypes.SHOW_MOVIE_FAIL:
+            return {...state,
+                    loading: false,
+                    fetchError: action.error};
     }
     return state;
 }

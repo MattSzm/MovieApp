@@ -4,15 +4,16 @@ import './index.css';
 import App from './App';
 import * as serviceWorker from './serviceWorker';
 import moviesReducer from '../src/store/reducers/movies';
-import { createStore } from 'redux';
+import { createStore, applyMiddleware } from 'redux';
 import { Provider } from 'react-redux';
+import Thunk from 'redux-thunk';
 import axios from 'axios'
 
 axios.defaults.baseURL = process.env.REACT_APP_API_KEY;
 
 
 
-const store = createStore(moviesReducer);
+const store = createStore(moviesReducer, applyMiddleware(Thunk));
 
 
 ReactDOM.render(

@@ -3,7 +3,7 @@ import MovieItem from "../../components/MovieItem/MovieItem";
 import classes from './MovieSet.module.css';
 import Slider from '../../components/UI/SliderItems/SliderItems';
 import { connect } from 'react-redux';
-import * as actionTypes from '../../store/actions/actionTypes';
+import * as actionsRedux from '../../store/actions/movies';
 import MovieDetail from "../MovieDetail/MovieDetail";
 
 
@@ -98,7 +98,6 @@ class MovieSet extends Component{
     render() {
         const items = this.props.items.map(item => (
             <MovieItem
-                title={item.title}
                 imageSource={item.imageSource}
                 key={item.id}
                 id={item.id}
@@ -106,6 +105,7 @@ class MovieSet extends Component{
                 refreshed={item.refreshed}
                 showInfo={this.props.OnMouseHandlerAction}
                 hideInfo={this.props.OffMouseHandlerAction}
+                openDetails={this.props.ShowDetailsAction}
                 offset = {this.state.offset}
             />));
 
@@ -135,19 +135,15 @@ class MovieSet extends Component{
 
 const mapStateToProps = state => {
     return {
-        items: state.items
+        items: state.items,
     }
 }
 
 const mapDispatchToProps = dispatch => {
     return {
-        OnMouseHandlerAction: (Id) => dispatch({
-                        type: actionTypes.ON_MOUSE_HANDLER_MOVIE,
-                        itemId: Id}),
-        OffMouseHandlerAction: (Id) => dispatch({
-                        type: actionTypes.OFF_MOUSE_HANDLER_MOVIE,
-                        itemId: Id
-        })
+        OnMouseHandlerAction: (Id) => dispatch(actionsRedux.onMouseHandlerMovie(Id)),
+        OffMouseHandlerAction: (Id) => dispatch(actionsRedux.offMouseHandlerMovie(Id)),
+        ShowDetailsAction: (Id) => dispatch(actionsRedux.showDetails(Id))
     }
 }
 
