@@ -60,7 +60,7 @@
     .MovieSet{
         max-width: 95%;
         height: 460px;
-        margin-bottom: 70px;
+        margin-bottom: 85px;
     }
     .MovieSet ul {
         grid-template-columns: repeat(50, 270px);
@@ -74,7 +74,7 @@
     .MovieSet{
         max-width: 95%;
         height: 550px;
-        margin-bottom: 90px;
+        margin-bottom: 100px;
     }
     .MovieSet ul {
         grid-template-columns: repeat(50, 360px);

@@ -36,6 +36,8 @@ const MovieYoutube = (props) => {
         opts.width = '660';
     }
 
+
+    let apliedClassess = [classes.MovieYoutube, classes.YoutubeLoading];
     let youtube = (<YouTube
                         videoId={props.url}
                         opts={opts}
@@ -43,8 +45,12 @@ const MovieYoutube = (props) => {
     if (props.widthResolution < 290){
         youtube = null;
     }
+    if(youtube){
+        apliedClassess = [classes.MovieYoutube, classes.YoutubeReady];
+    }
+
     return (
-        <div className={classes.MovieYoutube}>
+        <div className={apliedClassess.join(' ')}>
             {youtube}
         </div>
     );

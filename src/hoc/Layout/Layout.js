@@ -9,14 +9,7 @@ class Layout extends Component
         return (
             <Fragment>
                 <Logo />
-                <br />
-                LAYOUT
                 {this.props.children}
-                <br /><br /><br /><br /><br /><br /><br /><br /><br /><br />
-                <br /><br /><br /><br /><br /><br /><br /><br /><br /><br />
-                <br /><br /><br /><br /><br /><br /><br /><br /><br /><br />
-                <br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br />
-                <br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br />
 
             </Fragment>
         );

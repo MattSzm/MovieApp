@@ -1,6 +1,6 @@
 .MovieInfo{
     width: 37.5%;
-
+    animation: MovieInfoOpacity 1.5s linear forwards;
 }
 .MovieInfo h1{
     border-bottom: solid darkred;
@@ -8,7 +8,6 @@
 
 .MovieInfo h3{
     margin-top: -15px;
-    margin-bottom: 40px;
 }
 
 .MovieInfo p{
@@ -21,5 +20,17 @@
 @media (max-width: 1100px) {
     .MovieInfo {
         width: 100%;
+    }
+}
+
+@keyframes MovieInfoOpacity {
+    0% {
+        opacity: 0.1;
+    }
+    50% {
+        opacity: 0.4;
+    }
+    100% {
+        opacity: 1;
     }
 }

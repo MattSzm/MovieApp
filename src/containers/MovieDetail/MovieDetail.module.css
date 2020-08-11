@@ -5,6 +5,8 @@
     width: 90%;
     margin: auto;
     text-align: center;
+    animation: showMovieDetail 1.5s ease-out forwards;
+    padding-bottom: 120px;
 }
 
 @media (max-width: 1100px) {
@@ -13,3 +15,4 @@
         flex-flow: column;
     }
 }
+

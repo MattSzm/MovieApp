@@ -1,6 +1,7 @@
 .MovieYoutube {
     width: 57.5%;
     margin: auto;
+    display: block;
 }
 
 
@@ -9,4 +10,27 @@
         width: 100%;
         margin-bottom: 40px;
     }
+}
+
+.YoutubeLoading {
+    display: none;
+}
+.YoutubeReady {
+    animation: YoutubeMoveIn 2s ease-out forwards;
+}
+
+@keyframes YoutubeMoveIn {
+    0% {
+        opacity: 1;
+        transform: translateX(-300%);
+    }
+    50% {
+        opacity: 1;
+        transform: translateX(10%);
+    }
+    100% {
+        opacity: 1;
+        transform: translateX(0);
+    }
+
 }

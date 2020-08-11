@@ -6,16 +6,15 @@ import MovieSet from "./containers/Movieset/MovieSet";
 
 class App extends Component
 {
-
-  render() {
-    return (
-        <div className="App">
-          <Layout>
-              <MovieSet />
-          </Layout>
-        </div>
-    );
-  }
+    render() {
+        return (
+            <div className="App">
+                <Layout>
+                    <MovieSet />
+                </Layout>
+            </div>
+        );
+    }
 }
 
 export default App;

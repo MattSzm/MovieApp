@@ -1,4 +1,4 @@
-import React, { Component, Fragment } from "react";
+import React, { PureComponent, Fragment } from "react";
 import MovieItem from "../../components/MovieItem/MovieItem";
 import classes from './MovieSet.module.css';
 import Slider from '../../components/UI/SliderItems/SliderItems';
@@ -7,7 +7,8 @@ import * as actionsRedux from '../../store/actions/movies';
 import MovieDetail from "../MovieDetail/MovieDetail";
 
 
-class MovieSet extends Component{
+
+class MovieSet extends PureComponent{
     constructor(props) {
         super(props);
         this.updateWindowDimensions = this.updateWindowDimensions.bind(this);
@@ -94,7 +95,6 @@ class MovieSet extends Component{
         }
     };
 
-
     render() {
         const items = this.props.items.map(item => (
             <MovieItem
@@ -125,8 +125,10 @@ class MovieSet extends Component{
                     />
                 </div>
 
+
                 <MovieDetail widthResolution={this.state.width}
-                            heightResolution={this.state.height}/>
+                             heightResolution={this.state.height}/>
+
             </Fragment>
 
         );

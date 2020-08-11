@@ -17,6 +17,7 @@ class MovieDetail extends Component{
                     <MovieInfo
                         movieTitle={this.props.movieDetailData.title}
                         movieDesc={this.props.movieDetailData.description}
+                        movieYear={this.props.movieDetailData.year}
                         movieDirector={this.props.movieDetailData.director}
                 />
                 </div>);
