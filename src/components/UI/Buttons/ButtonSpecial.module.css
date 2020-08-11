@@ -1,0 +1,98 @@
+/*.customButton{*/
+/*    background: none;*/
+/*    background-color: darkred;*/
+/*    border: none;*/
+/*    color: white;*/
+/*    cursor: pointer;*/
+/*    font: inherit;*/
+/*    padding: 10px;*/
+/*}*/
+/*.customButton:focus { outline: none; }*/
+
+
+/*.Main {*/
+/*    height: 100vh;*/
+/*    display: flex;*/
+/*    align-items: center;*/
+/*    justify-content: center;*/
+/*    background-color: #2d3436;*/
+/*    background-image: linear-gradient(315deg, #2d3436 0%, #000000 74%);*/
+/*}*/
+
+.customButton {
+    font-size: 1.5em;
+    background: #222;
+    width: 12%;
+    height: 26px;
+    border: none;
+    border-radius: 10px;
+    color: #eee;
+    position: relative;
+    transition: 1s;
+    -webkit-tap-highlight-color: transparent;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    cursor: pointer;
+    padding-top: 5px;
+}
+
+.customButton .circle {
+    width: 5px;
+    height: 5px;
+    background: transparent;
+    border-radius: 50%;
+    position: absolute;
+    top: 0;
+    left: 50%;
+    overflow: hidden;
+    transition: 500ms;
+}
+
+.noSelect {
+    -webkit-touch-callout: none;
+    -webkit-user-select: none;
+    -khtml-user-select: none;
+    -moz-user-select: none;
+    -ms-user-select: none;
+    user-select: none;
+}
+
+.customButton:hover {
+    background: transparent;
+}
+
+.customButton:hover .circle {
+    height: 100%;
+    width: 100%;
+    left: 0;
+    border-radius: 0;
+    border-bottom: 2px solid #eee;
+}
+
+@media (max-width: 1500px) {
+    .customButton{
+        font-size: 1.15em;
+    }
+}
+@media (max-width: 1200px) {
+    .customButton{
+        font-size: 1em;
+    }
+}
+@media (max-width: 1000px) {
+    .customButton{
+        font-size: 0.7em;
+    }
+}
+@media (max-width: 670px) {
+    .customButton{
+        font-size: 0.5em;
+        height: 18px;
+    }
+}
+@media (max-width: 400px) {
+    .customButton{
+        font-size: 0.3em;
+    }
+}

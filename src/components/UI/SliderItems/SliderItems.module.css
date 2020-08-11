@@ -51,6 +51,7 @@
     }
     .arrowRight:hover {
         border-left: 32px solid #ad0707;
+        transform: scale(1.08);
     }
 
     .arrowLeft {
@@ -60,6 +61,7 @@
     }
     .arrowLeft:hover{
         border-right: 32px solid #ad0707;
+        transform: scale(1.08);
     }
 
 }

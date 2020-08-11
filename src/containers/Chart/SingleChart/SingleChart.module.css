@@ -1,0 +1,15 @@
+.ChartMainDiv {
+    width: 90%;
+    margin: auto
+}
+
+@media (min-width: 1500px) {
+    .ChartMainDiv{
+        width: 1350px;
+    }
+}
+@media (min-width: 1920px) {
+    .ChartMainDiv{
+        width: 1728px;
+    }
+}
