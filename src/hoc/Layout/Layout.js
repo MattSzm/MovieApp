@@ -1,8 +1,8 @@
 import React, {Component, Fragment} from "react";
 import Logo from '../../components/Logo/Logo';
 import Footer from "../../components/UI/Footer/Footer";
-import SingleChart from "../../containers/Chart/SingleChart/SingleChart";
-import {Route} from 'react-router-dom';
+import ChartSet from "../../containers/Chart/ChartSet";
+import { Route, Link } from 'react-router-dom';
 
 class Layout extends Component
 {
@@ -10,9 +10,12 @@ class Layout extends Component
     render() {
         return (
             <Fragment>
-                <Logo />
+                <Link to={'/'}>
+                    <Logo />
+                </Link>
+
                 {this.props.children}
-                <Route path={'/charts'} component={SingleChart} />
+                <Route path={'/'} exact component={ChartSet} />
                 <Footer />
             </Fragment>
         );

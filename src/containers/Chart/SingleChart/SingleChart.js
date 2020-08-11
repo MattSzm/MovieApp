@@ -8,35 +8,23 @@ import Button from '../../../components/UI/Buttons/ButtonSpecial';
 import classes from './SingleChart.module.css';
 
 
+
 const view = [1000, 450] // [width, height]
 const trbl = [30, 2, 30, 2] // [top, right, bottom, left] margins
 
-const dims = [ // Adjusted dimensions [width, height]
+const dims = [
     view[0] - trbl[1] - trbl[3],
     view[1] - trbl[0] - trbl[2],
 ]
 
 
-const names = [
-    { name: 'Dwayne Johnson', frequency: 89},
-    { name: 'Chris Hemsworth', frequency: 76},
-    { name: 'Robert Downey Jr.', frequency: 66 },
-    { name: 'Akshay Kumar', frequency: 65 },
-    { name: 'Jackie Chan', frequency: 58 },
-    { name: 'Bradley Cooper', frequency: 57 },
-    { name: 'Adam Sandler', frequency: 57 },
-    { name: 'Chris Evans', frequency: 43 },
-
-]
-
-const y = scaleLinear()
-    .range([dims[1], 0])
-    .domain([0, max(names, (d) => d.frequency)])
-
 class SingleChart extends PureComponent {
     state = {
         sortAlpha: true,
     }
+    y = scaleLinear()
+        .range([dims[1], 0])
+        .domain([0, max(this.props.chartData, (d) => d.frequency)]);
 
     update = () => {
         this.setState((state) => ({
@@ -45,9 +33,10 @@ class SingleChart extends PureComponent {
     }
 
     render() {
+
         const { sortAlpha } = this.state
 
-        const sorted = names.sort(sortAlpha ?
+        const sorted = this.props.chartData.sort(sortAlpha ?
             (a, b) => ascending(a.name, b.name) :
             (a, b) => a.frequency - b.frequency,
         ).slice(0)
@@ -95,14 +84,14 @@ class SingleChart extends PureComponent {
                                     <g key={key} transform={`translate(${x},0)`}>
                                         <text
                                             x={0}
-                                            y={y(data.frequency)+20}
+                                            y={this.y(data.frequency)+20}
                                             // dx="-.35em"
                                             dx={(width-data.frequency.toString().length*13)/2}
                                             fill="#dadada"
                                         >{data.frequency}</text>
                                         <rect
-                                            height={dims[1] - y(data.frequency)}
-                                            y={y(data.frequency)}
+                                            height={dims[1] - this.y(data.frequency)}
+                                            y={this.y(data.frequency)}
                                             fill="darkred"
                                             width={width}
                                             opacity={opacity}

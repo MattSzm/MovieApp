@@ -145,7 +145,7 @@ class MovieSet extends PureComponent{
 
 const mapStateToProps = state => {
     return {
-        items: state.items,
+        items: state.movies.items,
     }
 }
 

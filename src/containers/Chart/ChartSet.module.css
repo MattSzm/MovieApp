@@ -1,0 +1,33 @@
+.ChartSet{
+    margin: auto;
+}
+
+.ChartSet h3{
+    width: auto;
+    text-decoration: underline;
+    text-decoration-color: darkred;
+    animation: ownOpacity 1s ease-in forwards;
+}
+.ChartSet p{
+    animation: ownOpacity 1s ease-in forwards;
+}
+
+.active{
+    cursor: pointer;
+}
+.disabled{
+    cursor: auto;
+}
+
+@keyframes ownOpacity {
+
+    0% {
+        opacity: 0.1;
+    }
+    50% {
+        opacity: 0.5;
+    }
+    100% {
+        opacity: 1;
+    }
+}

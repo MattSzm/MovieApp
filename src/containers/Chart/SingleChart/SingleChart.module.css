@@ -5,11 +5,11 @@
 
 @media (min-width: 1500px) {
     .ChartMainDiv{
-        width: 1350px;
+        width: 1275px;
     }
 }
 @media (min-width: 1920px) {
     .ChartMainDiv{
-        width: 1728px;
+        width: 1632px;
     }
 }

@@ -39,8 +39,8 @@ class MovieDetail extends Component{
 
 const mapStateToProps = (state) => {
     return {
-        movieDetailData: state.movieDetailData,
-        loading: state.loading
+        movieDetailData: state.movies.movieDetailData,
+        loading: state.movies.loading
     }
 }
 
