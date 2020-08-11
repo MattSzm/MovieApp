@@ -3,6 +3,7 @@
     height: 70px;
     width: auto;
     margin-bottom: 25px;
+    background-image: linear-gradient(#616161, black);
 }
 .Logo img{
     margin: 25px 20px;

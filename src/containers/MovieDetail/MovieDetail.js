@@ -3,11 +3,15 @@ import MovieYoutube from "../../components/MovieDetail/MovieYoutube/MovieYoutube
 import MovieInfo from "../../components/MovieDetail/MovieInfo/MovieInfo";
 import classes from './MovieDetail.module.css';
 import { connect } from 'react-redux';
+import Spinner from '../../components/UI/Spinner/Spinner'
 
 
 class MovieDetail extends Component{
     render() {
         let detailComponent = null;
+        if(this.props.loading){
+        detailComponent = <Spinner />;
+        }
         if ( this.props.movieDetailData) {
             detailComponent = (
                 <div className={classes.MovieDetail}>
@@ -35,7 +39,8 @@ class MovieDetail extends Component{
 
 const mapStateToProps = (state) => {
     return {
-        movieDetailData: state.movieDetailData
+        movieDetailData: state.movieDetailData,
+        loading: state.loading
     }
 }
 

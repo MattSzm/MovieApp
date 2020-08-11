@@ -5,7 +5,7 @@ import Slider from '../../components/UI/SliderItems/SliderItems';
 import { connect } from 'react-redux';
 import * as actionsRedux from '../../store/actions/movies';
 import MovieDetail from "../MovieDetail/MovieDetail";
-
+import {Route} from 'react-router-dom';
 
 
 class MovieSet extends PureComponent{
@@ -95,6 +95,11 @@ class MovieSet extends PureComponent{
         }
     };
 
+    ShowDetail = (Id) => {
+        this.props.ShowDetailsAction(Id);
+        this.props.history.push('/movie/' + Id);
+    }
+
     render() {
         const items = this.props.items.map(item => (
             <MovieItem
@@ -105,7 +110,7 @@ class MovieSet extends PureComponent{
                 refreshed={item.refreshed}
                 showInfo={this.props.OnMouseHandlerAction}
                 hideInfo={this.props.OffMouseHandlerAction}
-                openDetails={this.props.ShowDetailsAction}
+                openDetails={this.ShowDetail}
                 offset = {this.state.offset}
             />));
 
@@ -124,10 +129,13 @@ class MovieSet extends PureComponent{
                             scroll={this.scrollRight}
                     />
                 </div>
+                <Route path={this.props.match.path + 'movie/'} render={() => (
+                   <MovieDetail widthResolution={this.state.width}
+                                heightResolution={this.state.height}/>
+                )} />
 
-
-                <MovieDetail widthResolution={this.state.width}
-                             heightResolution={this.state.height}/>
+                {/*<MovieDetail widthResolution={this.state.width}*/}
+                {/*             heightResolution={this.state.height}/>*/}
 
             </Fragment>
 
