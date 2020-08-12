@@ -23,7 +23,7 @@ class ChartSet extends Component{
                     </h3>
                     <p><i>(in million U.S. dollars)</i></p>
                     <SingleChart chartData={this.props.charts['0']}
-                                 offset={0}/>
+                                 offset={2}/>
                 </div>);
         }
 
@@ -43,7 +43,7 @@ class ChartSet extends Component{
                     </h3>
                     <p><i>(in millions)</i></p>
                     <SingleChart chartData={this.props.charts['1']}
-                                 offset={0}/>
+                                 offset={2}/>
                 </div>);
         }
 
@@ -62,7 +62,7 @@ class ChartSet extends Component{
                         Movies with the most Facebook fans as of June 2020
                     </h3>
                     <SingleChart chartData={this.props.charts['2']}
-                                 offset={0}/>
+                                 offset={-2}/>
                 </div>);
         }
 
@@ -81,7 +81,7 @@ class ChartSet extends Component{
                         Number of movies released in the United States and Canada from 2000 to 2019
                     </h3>
                     <SingleChart chartData={this.props.charts['3']}
-                                        offset={0}/>
+                                        offset={-5}/>
                 </div>);
         }
 
@@ -103,7 +103,7 @@ class ChartSet extends Component{
                     </h3>
                     <p><i>(in percentage)</i></p>
                     <SingleChart chartData={this.props.charts['4']}
-                                    offset={30}/>
+                                    offset={16}/>
                 </div>);
         }
 

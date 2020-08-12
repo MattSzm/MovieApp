@@ -2,7 +2,7 @@ import React, {Component} from 'react';
 import './App.css';
 import Layout from "./hoc/Layout/Layout";
 import MovieSet from "./containers/Movieset/MovieSet";
-import { Route, Switch, withRouter, Redirect } from 'react-router-dom';
+import { Route, Switch, Redirect } from 'react-router-dom';
 
 class App extends Component
 {
@@ -12,6 +12,7 @@ class App extends Component
                 <Layout>
                     <Switch>
                         <Route path={'/'} component={MovieSet} />
+                        <Redirect to={'/'} />
                     </Switch>
                 </Layout>
             </div>

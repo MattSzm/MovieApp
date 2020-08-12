@@ -99,7 +99,7 @@ class SingleChart extends PureComponent {
                                         />
                                         <text
                                             style={{
-                                                fontSize: "0.9em"
+                                                fontSize: "1em"
                                             }}
                                             x={0}
                                             y={dims[1] + 15}

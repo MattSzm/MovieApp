@@ -39,7 +39,7 @@ class Comments extends Component{
     }
 
     render() {
-        let comments = null;
+        let comments = <p>No comments</p>;
         if(this.props.comments){
             comments = Object.keys(this.props.comments).map((key) => (this.props.comments[key]));
             comments = comments.map((comment,index) => {
@@ -64,7 +64,7 @@ class Comments extends Component{
                     <br/>
                     <Button click={this.sendComment}
                             active={this.state.buttonActive}>
-                        Add a comment
+                        Comment!
                     </Button>
                 </Fragment>);
         }
