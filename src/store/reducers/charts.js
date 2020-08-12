@@ -3,14 +3,16 @@ import * as actionTypes from '../actions/actionTypes';
 const initialState = {
     Charts: {},
     loading: false,
-    error: null
+    error: null,
+    lastFetchId: null
 }
 
 const reducer = (state=initialState, action) => {
     switch (action.type){
         case actionTypes.FETCH_CHART_START:
             return {...state,
-                    loading: true};
+                    loading: true,
+                    lastFetchId: action.lastFetchId};
         case actionTypes.FETCH_CHART_SUCCESS:
             return {...state,
                     Charts: Object.assign({},

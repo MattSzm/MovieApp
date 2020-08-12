@@ -3,9 +3,10 @@ import axios from 'axios';
 
 
 
-const fetchDataStart = () => {
+const fetchDataStart = (Id) => {
     return {
-        type: actionTypes.FETCH_CHART_START
+        type: actionTypes.FETCH_CHART_START,
+        lastFetchId: Id
     };
 };
 
@@ -14,7 +15,7 @@ const fetchDataSuccess = (data, Id) => {
     object[Id] = data;
     return {
         type: actionTypes.FETCH_CHART_SUCCESS,
-        fetchedObject: object,
+        fetchedObject: object
     };
 };
 
@@ -27,7 +28,7 @@ const fetchDataFail = (error) => {
 
 export const fetchData = (Id) => {
     return (dispatch) => {
-        dispatch(fetchDataStart());
+        dispatch(fetchDataStart(Id));
         axios.get('/charts/' + Id + '.json')
             .then(response => {
                 dispatch(fetchDataSuccess(response.data, Id))})

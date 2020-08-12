@@ -9,7 +9,7 @@ import classes from './SingleChart.module.css';
 
 
 
-const view = [1000, 450] // [width, height]
+const view = [1000, 350] // [width, height]
 const trbl = [30, 2, 30, 2] // [top, right, bottom, left] margins
 
 const dims = [
@@ -84,9 +84,10 @@ class SingleChart extends PureComponent {
                                     <g key={key} transform={`translate(${x},0)`}>
                                         <text
                                             x={0}
-                                            y={this.y(data.frequency)+20}
+                                            y={(this.y(data.frequency)<270) ?
+                                                this.y(data.frequency)+22 : this.y(data.frequency)-10}
                                             // dx="-.35em"
-                                            dx={(width-data.frequency.toString().length*13)/2}
+                                            dx={(width-data.frequency.toString().length*11)/2}
                                             fill="#dadada"
                                         >{data.frequency}</text>
                                         <rect
@@ -103,7 +104,9 @@ class SingleChart extends PureComponent {
                                             x={0}
                                             y={dims[1] + 15}
                                             // dx="-.35em"
-                                            dx={(width-data.name.length*8)/2}
+                                            dx={width-data.name.length ?
+                                                (width-data.name.length*8)/2 + this.props.offset :
+                                                (width-data.name.toString().length*8)/2 + this.props.offset}
                                             fill="#dadada"
                                         >{data.name}</text>
                                     </g>

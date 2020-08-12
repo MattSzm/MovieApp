@@ -4,18 +4,20 @@
 
 .ChartSet h3{
     width: auto;
-    text-decoration: underline;
+    text-decoration: underline ;
     text-decoration-color: darkred;
-    animation: ownOpacity 1s ease-in forwards;
+    animation: ownOpacity 1.2s ease-in forwards;
 }
 .ChartSet p{
-    animation: ownOpacity 1s ease-in forwards;
+    animation: ownOpacity 1.2s ease-in forwards;
 }
 
 .active{
     cursor: pointer;
+   margin: 80px 0;
 }
 .disabled{
+    margin-top: 50px;
     cursor: auto;
 }
 
