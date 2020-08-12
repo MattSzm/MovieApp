@@ -15,8 +15,8 @@
  
  
 ###### Credits:
- ######* [statista.com][statisticalink] - Data I used in charts.
- ######* [movieposters.com][movielink] - Images.
+ * ###### [statista.com][statisticalink] - Data I used in charts.
+ * ###### [movieposters.com][movielink] - Images.
  
 
 
