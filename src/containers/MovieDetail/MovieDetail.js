@@ -4,7 +4,7 @@ import MovieInfo from "../../components/MovieDetail/MovieInfo/MovieInfo";
 import classes from './MovieDetail.module.css';
 import { connect } from 'react-redux';
 import Spinner from '../../components/UI/Spinner/Spinner'
-
+import Comments from "../Comments/Comments";
 
 class MovieDetail extends Component{
     render() {
@@ -32,6 +32,7 @@ class MovieDetail extends Component{
         return (
             <Fragment>
                 {detailComponent}
+                <Comments/>
             </Fragment>
         );
     }
@@ -39,6 +40,7 @@ class MovieDetail extends Component{
 
 const mapStateToProps = (state) => {
     return {
+        movieDetailIndex: state.movies.movieDetailIndex,
         movieDetailData: state.movies.movieDetailData,
         loading: state.movies.loading
     }

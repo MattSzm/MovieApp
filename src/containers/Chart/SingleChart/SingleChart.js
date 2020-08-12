@@ -1,6 +1,6 @@
 import React, { PureComponent } from 'react'
 import { NodeGroup } from 'react-move'
-import Surface from '../../../components/Surface/Surface';
+import Surface from '../../../components/UI/Surface/Surface';
 import { scaleLinear, scaleBand } from 'd3-scale'
 import { easeExpInOut } from 'd3-ease'
 import { ascending, max } from 'd3-array'
@@ -115,7 +115,8 @@ class SingleChart extends PureComponent {
                         )}
                     </NodeGroup>
                 </Surface>
-                <Button click={this.update}>
+                <Button click={this.update}
+                        active={true}>
                     {`Sort by ${sortAlpha ? 'Value' : 'Name'}`}
                 </Button>
             </div>

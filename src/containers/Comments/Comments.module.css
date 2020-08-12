@@ -1,0 +1,12 @@
+.Comments{
+    width: 70%;
+    margin: auto;
+    padding-bottom: 4em;
+}
+.Header{
+    width: 80%;
+    margin: auto;
+    border-bottom: darkred solid 2px;
+    /*text-decoration: underline ;*/
+    /*text-decoration-color: darkred;*/
+}

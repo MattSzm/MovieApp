@@ -3,7 +3,8 @@ import MovieItem from "../../components/MovieItem/MovieItem";
 import classes from './MovieSet.module.css';
 import Slider from '../../components/UI/SliderItems/SliderItems';
 import { connect } from 'react-redux';
-import * as actionsRedux from '../../store/actions/movies';
+import * as actionsReduxMovies from '../../store/actions/movies';
+import * as actionReduxComments from '../../store/actions/comments';
 import MovieDetail from "../MovieDetail/MovieDetail";
 import {Route} from 'react-router-dom';
 
@@ -97,6 +98,7 @@ class MovieSet extends PureComponent{
 
     ShowDetail = (Id) => {
         this.props.ShowDetailsAction(Id);
+        this.props.FetchCommentsAction(Id);
         this.props.history.push('/movie/' + Id);
     }
 
@@ -134,8 +136,7 @@ class MovieSet extends PureComponent{
                                 heightResolution={this.state.height}/>
                 )} />
 
-                {/*<MovieDetail widthResolution={this.state.width}*/}
-                {/*             heightResolution={this.state.height}/>*/}
+
 
             </Fragment>
 
@@ -151,9 +152,10 @@ const mapStateToProps = state => {
 
 const mapDispatchToProps = dispatch => {
     return {
-        OnMouseHandlerAction: (Id) => dispatch(actionsRedux.onMouseHandlerMovie(Id)),
-        OffMouseHandlerAction: (Id) => dispatch(actionsRedux.offMouseHandlerMovie(Id)),
-        ShowDetailsAction: (Id) => dispatch(actionsRedux.showDetails(Id))
+        OnMouseHandlerAction: (Id) => dispatch(actionsReduxMovies.onMouseHandlerMovie(Id)),
+        OffMouseHandlerAction: (Id) => dispatch(actionsReduxMovies.offMouseHandlerMovie(Id)),
+        ShowDetailsAction: (Id) => dispatch(actionsReduxMovies.showDetails(Id)),
+        FetchCommentsAction: (Id) => dispatch(actionReduxComments.showMovieComments(Id))
     }
 }
 

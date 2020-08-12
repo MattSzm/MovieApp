@@ -1,0 +1,12 @@
+.CommentInput {
+    width: 70%;
+    height: 3em;
+    font-size: 1em;
+    margin: auto;
+    background: linear-gradient(black, #151515 100%);
+    border: none;
+    color: white;
+    user-select: none;
+    outline: none;
+    display: block;
+}

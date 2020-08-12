@@ -8,7 +8,7 @@ const Footer = (props) => {
             <div className={classes.Line} />
             <p>Check the repository on my
                 <strong
-                    onClick={()=>{window.open('https://github.com/MattSzm',
+                    onClick={()=>{window.open('https://github.com/MattSzm/MoviesApp',
                         '_blank');}}>
                         Github
                 </strong>.</p>

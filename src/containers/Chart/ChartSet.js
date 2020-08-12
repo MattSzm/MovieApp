@@ -81,7 +81,7 @@ class ChartSet extends Component{
                         Number of movies released in the United States and Canada from 2000 to 2019
                     </h3>
                     <SingleChart chartData={this.props.charts['3']}
-                                    offset={0}/>
+                                        offset={0}/>
                 </div>);
         }
 

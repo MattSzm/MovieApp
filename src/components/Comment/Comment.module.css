@@ -1,0 +1,23 @@
+.Comment{
+    width: 100%;
+    height: auto;
+    border-bottom: solid #222222 2px;
+    animation: opacityCustom 1.2s linear;
+}
+.Author {
+    text-align: left;
+
+}
+
+@keyframes opacityCustom {
+    0% {
+        opacity: 0.1;
+    }
+    50% {
+        opacity: 0.4;
+    }
+    100% {
+        opacity: 1;
+    }
+
+}

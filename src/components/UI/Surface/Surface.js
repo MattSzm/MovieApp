@@ -5,7 +5,6 @@ export default function Surface(props) {
     const { className, view, trbl, style, children, ...other } = props
     const paddingBottom = `${Math.round((view[1] / view[0]) * 100)}%`
 
-    // uses bottom-padding hack. See https://css-tricks.com/scale-svg/
     return (
         <div
             className={className}
