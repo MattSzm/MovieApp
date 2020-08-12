@@ -12,7 +12,7 @@ class App extends Component
                 <Layout>
                     <Switch>
                         <Route path={'/'} component={MovieSet} />
-                        <Redirect to={'/'} />
+                        <Redirect to='/' />
                     </Switch>
                 </Layout>
             </div>
