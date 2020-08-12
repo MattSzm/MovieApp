@@ -1,5 +1,5 @@
 # Movie App
-##### Live version: https://movieapp-b21ae.web.app/
+#### Live version: https://movieapp-b21ae.web.app/
 
 ## I've created it with:
  * JavaScript
@@ -10,7 +10,7 @@
  
  All additional extensions and packages can be found in 'package.json'.
  
- ##### Application works with Firebase Realtime Database.
+ #### Application works with Firebase Realtime Database.
  
  
  
