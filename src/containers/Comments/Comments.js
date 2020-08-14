@@ -49,7 +49,7 @@ class Comments extends Component{
                 </Comment>});
 
         }
-        if(this.props.IdMovie) {
+        if(this.props.IdMovie || this.props.IdMovie === 0) {
             return (
                 <Fragment>
                     <h2 className={classes.Header}>Comments section</h2>
