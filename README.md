@@ -12,20 +12,14 @@
  
  #### Application works with Firebase Realtime Database.
  
- 
+ ![](media-Readme/1.gif)
+ ###
+ ![](media-Readme/2.gif)
  
 ###### Credits:
  * ###### [statista.com][statisticalink] - Data I used in charts.
  * ###### [movieposters.com][movielink] - Images.
  
-
-
-
-
-
-
-
-
 
 [movielink]:https://www.movieposters.com/
 [statisticalink]:https://www.statista.com/
